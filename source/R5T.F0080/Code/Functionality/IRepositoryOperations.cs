@@ -45,7 +45,7 @@ namespace R5T.F0080
 
 			this.Checkin(
 				repositoryContext.LocalDirectoryPath,
-				Instances.CommitMessages.InitialCommit);
+				Instances.CommitMessages.InitialCommit.Value);
 
 			return remoteRepositoryUrl;
 		}
