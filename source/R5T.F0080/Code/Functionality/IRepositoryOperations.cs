@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 
-using R5T.F0042;
 using R5T.T0132;
 
 using N002 = R5T.T0153.N002;
@@ -17,10 +16,12 @@ namespace R5T.F0080
 			string localRepositoryDirectoryPath,
 			string commitMessage)
 		{
-			RepositoryOperator.Instance.Checkin(
+			var logger = Instances.LoggingOperator.Get_NullLogger();
+
+            RepositoryOperator.Instance.Checkin(
 				localRepositoryDirectoryPath,
 				commitMessage,
-				F0059.LoggingOperator.Instance.GetNullLogger());
+				logger);
 		}
 
 		/// <summary>
